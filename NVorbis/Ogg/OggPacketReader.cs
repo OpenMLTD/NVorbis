@@ -1,4 +1,4 @@
-﻿/****************************************************************************
+/****************************************************************************
  * NVorbis                                                                  *
  * Copyright (C) 2014, Andrew Ward <afward@gmail.com>                       *
  *                                                                          *
@@ -433,6 +433,8 @@ namespace NVorbis.Ogg
                         }
                     }
                     packet = packet.Next;
+
+                    if (packet == null) break;
                 }
 
                 foundPacket = FindPacketInPage(packet, granulePos, packetGranuleCountCallback);

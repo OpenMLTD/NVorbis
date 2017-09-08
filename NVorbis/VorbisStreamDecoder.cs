@@ -1,4 +1,4 @@
-﻿/****************************************************************************
+/****************************************************************************
  * NVorbis                                                                  *
  * Copyright (C) 2014, Andrew Ward <afward@gmail.com>                       *
  *                                                                          *
@@ -868,7 +868,8 @@ namespace NVorbis
             if (granulePos > 0)
             {
                 packet = _packetProvider.FindPacket(granulePos, GetPacketLength);
-                if (packet == null) throw new ArgumentOutOfRangeException("granulePos");
+                //if (packet == null) throw new ArgumentOutOfRangeException("granulePos");
+                if (packet == null) return;
             }
             else
             {
